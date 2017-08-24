@@ -6,12 +6,12 @@
 : ${NUMLAYERS:=2}
 : ${DROPOUT:=0.5}
 : ${GPUID:=-1}
-: ${LOGF:=/root/char-rnn/rnn.log}
+: ${LOGF:=/rnn.log}
 
 
 __execute_nn() {
 	echo $TRAINFILE $DATADIR $RNNSIZE $NUMLAYERS $DROPOUT $GPUID
-	echo "   >>> NN TRAINING <<<"
+	echo "   >>> TRAINING <<<"
 	export PATH=$PATH:"/root/torch/install/bin"
 	cd ~/char-rnn
 	th $TRAINFILE \

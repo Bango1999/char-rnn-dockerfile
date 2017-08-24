@@ -11,15 +11,15 @@ docker run -di --rm --name char-rnn myname/char-rnn
 ```
 + view training process output
 ```sh
-docker exec -t char_rnn tail -f /rnn.log
+docker exec -it char_rnn tail -f /rnn.log
+```
++ sample from char-rnn checkpoint file
+```sh
+docker exec -it char-rnn bin/sh /sample.sh
 ```
 + kill the container
 ```sh
 docker kill char-rnn
-```
-+ sample from char-rnn checkpoint file
-```sh
-docker exec -t char_rnn cd ~/char-rnn && th sample.lua cv/some_checkpoint.t7 -gpuid -1
 ```
 
 Bango1999/char-rnn forked from karpathy/char-rnn
