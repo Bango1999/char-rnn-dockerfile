@@ -17,9 +17,12 @@ docker exec -it char_rnn tail -f /rnn.log
 ```sh
 docker exec -it char-rnn bin/sh /sample.sh
 ```
++ access VM terminal
+```sh
+docker exec -it char-rnn bin/bash
+```
 + kill the container
 ```sh
 docker kill char-rnn
 ```
-
-Bango1999/char-rnn forked from karpathy/char-rnn
+[Bango1999/char-rnn](https://github.com/Bango1999/char-rnn) forked from [karpathy/char-rnn](https://github.com/karpathy/char-rnn)
